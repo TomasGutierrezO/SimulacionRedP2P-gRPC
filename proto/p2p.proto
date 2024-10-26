@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+service P2PService {
+    rpc GetFiles(FileRequest) returns (FileListResponse) {}
+    rpc DownloadFile(FileRequest) returns (FileResponse) {}  // Método para descargar un archivo
+}
+
+message FileRequest {
+    string peer_id = 1;
+    string file_name = 2;  // Nombre del archivo que se busca en el arreglo de files
+}
+
+message FileListResponse {
+    repeated string files = 1;  // Lista de archivos disponibles que coinciden con la búsqueda
+    string message = 2;  // Mensaje de estado, por ejemplo, "Archivos encontrados" o "Archivo no disponible"
+}
+
+message FileResponse {
+    string file_name = 1;  // Nombre del archivo descargado
+    string message = 2;  // Mensaje de estado como "Archivo descargado" o "Archivo no disponible"
+}

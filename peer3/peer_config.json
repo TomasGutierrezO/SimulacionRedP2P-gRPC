@@ -1,0 +1,9 @@
+{
+    "peer_id": "peer3",
+    "ip": "127.0.0.3",
+    "port": 50003,
+    "files": [
+        "prueba1.png",
+        "Windows.iso"
+    ]
+}

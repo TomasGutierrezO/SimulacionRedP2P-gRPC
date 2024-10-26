@@ -1,0 +1,6 @@
+{
+    "peer_id": "peer4",
+    "ip": "127.0.0.4",
+    "port": 50004,
+    "files": ["prueba2.png", "hola.txt"]
+}
